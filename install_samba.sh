@@ -20,7 +20,7 @@ echo
 ../bootstrap.sh
 
 echo
-echo -e "${GREEN}prepare environment${NC}"
+echo -e "${GREEN}finalize environment${NC}"
 echo
 
 # apt install build-essential
