@@ -11,22 +11,21 @@ echo
 
 phpdismod smbclient
 echo '' | pecl uninstall smbclient
-apt purge smbclient
-
-echo
-echo -e "${GREEN}prepare environment${NC}"
-echo
-
-apt autoremove
-# sudo apt install build-essential
-# sudo apt install libc6=2.31-0ubuntu9.2
-apt install php7.4-dev
+apt -y purge smbclient
 
 echo
 echo -e "${GREEN}load bootstrap${NC}"
 echo
 
 ../bootstrap.sh
+
+echo
+echo -e "${GREEN}prepare environment${NC}"
+echo
+
+# apt install build-essential
+# apt install libc6=2.31-0ubuntu9.2
+apt -y install php7.4-dev
 
 echo
 echo -e "${GREEN}samba compile${NC}"
